@@ -1,0 +1,27 @@
+Table: Books
+    PK -isbn int NOT NULL
+        title varchar(50) NOT NULL
+    FK1 -author_name varchar(50) NOT NULL
+
+Table: Authors
+    PK -author_name varchar(50) NOT NULL
+        biography varchar(350) NOT NULL
+
+Table: Customers
+    PK -customer_id int AUTO INCREMENT
+        name varchar(50) NOT NULL
+        email varchar(50) NOT NULL
+        phone_number varchar(10) NOT NULL
+
+Table: Transactions
+    PK -transaction_id int AUTO INCREMENT
+    FK1 -customer_id int NOT NULL
+    FK2 -isbn int NOT NULL
+        transaction_date date NOT NULL
+
+UPDATED 
+Table: Authors
+    PK -author_name varchar(50) NOT NULL
+    FK1 -collaborator_name varchar(50) NULL
+        biography varchar(350) NOT NULL
+    

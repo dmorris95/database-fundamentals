@@ -1,0 +1,26 @@
+Table: Vehicles
+    PK -vehicle_id int AUTO INCREMENT
+        registration_number varchar(15) NOT NULL
+        make varchar(50) NOT NULL
+        year year NOT NULL
+
+Table: Rental_Agreements
+    PK -agreement_id int AUTO INCREMENT
+    FK1 -vehicle_id int NOT NULL
+        customer_name varchar(50) NOT NULL
+        customer_email varchar(70) NOT NULL
+
+
+UPDATED
+
+Table: Vehicles
+    PK -vehicle_id int AUTO INCREMENT
+        registration_number varchar(15) UNIQUE
+        make varchar(50) NOT NULL
+        year year NOT NULL
+
+Table: Rental_Agreements
+    PK -agreement_id int AUTO INCREMENT
+    FK1 -vehicle_id int UNIQUE
+        customer_name varchar(50) NOT NULL
+        customer_email varchar(70) NOT NULL

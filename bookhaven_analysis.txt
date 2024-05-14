@@ -1,0 +1,5 @@
+The schema upholds 1NF by having no more than once value in a single cell. A customer has one phone number, email, and only one name. A book has one author and only one title. 
+2NF is being upheld becuase each table has a primary key being the customer_id, ISBN for books, transaction_id for transactions and the author_name for authors.
+The schema also upholds 3NF because each table's non-key attributes do not rely on other tables for information. The customer table has non-key attributes name, phone number, email which are tied directly to the customer_id.
+
+The schema demonstrates normalization by removing data redundancy amongst the tables with each table having specific primary keys and showing the relationships between the tables being one to many between the author and books and the customers and transactions. The transaction also hold a one to many with the books as a customer can have multiple books in one transaction. 
